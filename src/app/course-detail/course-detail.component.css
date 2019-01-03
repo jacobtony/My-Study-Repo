@@ -1,0 +1,45 @@
+.student-enrolment-form{
+	margin: 0 auto;
+}
+.course-detail{
+	width: 100%;
+}
+
+.course-detail-header{
+	background-color: #f0f0f0;
+    color: #000;
+    text-align: center;
+    padding: 20px 0px;
+    font-weight: normal;
+
+}
+.course-detail-edit{
+	width: 23%;
+	margin: 35px auto;
+}
+.student-enrolment-form input{
+	margin-left: 20px;
+}
+.prev-courses{
+	overflow-y: auto;
+}
+.prev-course-item{
+	background-color: #f0f0f0;
+    padding: 20px 10px;
+    
+    border: 1px solid #ccc;
+    width: 100%;
+}
+.student-list-table{
+	width: 50%;
+	margin: 20px auto; 
+	border: 1px solid #ccc;
+}
+.add-student-button{
+	width: 10%;
+    margin: 0 auto;
+    display: block;
+}
+
+
+

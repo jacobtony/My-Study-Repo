@@ -1,0 +1,87 @@
+<div class="course-detail">
+
+    <h3 class="course-detail-header">{{selectedCourse.courseName}}</h3>
+    <div class="course-detail-edit">
+
+<input [(ngModel)] = "courseName"/><button (click)="editCourse(courseName)">Edit Course</button>
+</div>
+<button (click)="htmlInsideModal.open()" class="add-student-button">Add Student</button>
+<table *ngIf="selectedCourse.students != undefined"class="student-list-table">
+    
+    <thead><th>Sl No.</th>
+    <th>Name
+    </th>
+<th>Email</th>
+<th>Course</th>
+</thead>
+<tbody><tr *ngFor="let student of selectedCourse.students; let index = index">
+    <td>{{index +1}}</td>
+    <td>{{student.firstName}}</td>
+    <td>{{student.email}}</td>
+<td>{{student.previousCourses.courseName }}</td>
+</tr></tbody>
+</table>
+<modal #htmlInsideModal>
+  <ng-template #modalHeader><h2>Enroll Student</h2></ng-template>
+  <ng-template #modalBody>
+   <div [formGroup]="myForm" class="student-enrolment-form">
+
+<form formGroupName = "studentForm" (ngSubmit)="onSubmit(htmlInsideModal)">
+       
+
+            <label>First Name:</label>
+            <input type="text" formControlName="firstName">
+            <label class="error-msg" *ngIf="myForm.controls.studentForm.controls.firstName.dirty && myForm.controls.studentForm.controls.firstName.errors &&
+            myForm.controls.studentForm.controls.firstName.errors.required">First Name is mandatory</label>
+             <label class="error-msg" *ngIf="myForm.controls.studentForm.controls.firstName.dirty && myForm.controls.studentForm.controls.firstName.errors && myForm.controls.studentForm.controls.firstName.errors.minlength">Minimum 5 characters </label>
+  <br/>
+        <label>Email: </label>
+             <input type="email" formControlName="email">
+             <p class="error-msg" *ngIf="
+             myForm.controls.studentForm.controls.email.dirty&&myForm.controls.studentForm.controls.email.invalid">Please enter a valid email</p>
+
+      
+    <h4>Previous Course</h4>
+    <div class="prev-courses">
+       <div class="prev-course-item" formGroupName ="previousCourses">
+        <p>
+            <label>Course Name:</label>
+            <input type="text" formControlName="courseName">
+        </p>
+        <p>
+            <label>Year Of Completion:</label>
+            <input type="text" formControlName="yearOfCompletion">
+        </p>
+         <p>
+            Proficiency
+            <label><input id="proficiency" type="radio" value="beginner" formControlName="proficiency"> Beginner</label>
+            
+           <label><input id="proficiency" type="radio"value="intermediate" formControlName="proficiency"> Intermediate</label>
+           <label><input id="proficiency" type="radio"value="advanced" formControlName="proficiency"> Advanced</label>
+        </p>
+
+       </div> 
+       
+
+        </div>
+
+
+
+       <button type="submit" [disabled]="!myForm.valid">Submit</button>
+
+
+    </form>
+
+
+
+    
+
+</div>
+  </ng-template>
+</modal>
+</div>
+
+
+
+
+

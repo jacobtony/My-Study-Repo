@@ -1,0 +1,20 @@
+button{
+  background-color: deepskyblue;
+    -webkit-appearance: none;
+    margin-left: 30px;
+    color: #fff;
+    border-radius: 6px;
+}
+button:focus {
+ 
+ outline:none;
+}
+.error-msg{
+	color:#bd4931;
+}
+input.ng-touched.ng-invalid{
+	border: 1px solid #bd4931;
+}
+h1{
+	color: #000 !important; 
+}

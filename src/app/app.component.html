@@ -1,0 +1,5 @@
+
+<h1 class="home-header">Welcome to XYZ College {{time | async}}</h1>
+<div><a  routerLink="courses">Courses</a></div>
+<div class="slide"[ngClass]="{'slide-up':errorMessage}"><p class="api-error">{{errorMessage}} <span (click) = "clearError()">X</span></p> </div>
+<router-outlet></router-outlet>
