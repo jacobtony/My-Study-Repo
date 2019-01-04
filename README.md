@@ -7,3 +7,6 @@ Angular 7.1.4 is used for UI, API routing is handled by ExpressJS and server is 
 
 # Installing and Running
 "npm install" will install all the node modules and their dependencies, and then "npm run build" will be bundling the files and serving the content from localhost:8080.
+
+# Requirement and Dependencies
+Node server is and mongodb is running on the local machine
