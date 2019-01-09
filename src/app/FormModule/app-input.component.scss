@@ -1,0 +1,37 @@
+#input {
+	color: #666;
+    position: relative;
+    display: inline-block;
+    width:70%;
+    
+}
+.app-input{
+  border:none;
+  padding-top:10px;
+  outline:none;
+  width:100%;
+}
+
+span {
+	position: absolute;
+    left: 30%;
+	content: '';
+	
+	height: 2px;
+    background: #47a7f5;
+    transition: all 0.5s linear;
+    width: 0;
+    bottom: -5px;  
+}
+
+.app-input:focus ~ span {
+	width: 70%;
+  outline:none;
+    margin-left: -105px;
+}
+.app-input:focus::-webkit-input-placeholder {
+   position:relative;
+   bottom:20px;
+   z-index:9999;
+   font-size:10px;
+} 

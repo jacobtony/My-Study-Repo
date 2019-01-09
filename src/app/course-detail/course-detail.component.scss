@@ -1,8 +1,11 @@
+
+$primary-color: lightblue;
 .student-enrolment-form{
 	margin: 0 auto;
 }
 .course-detail{
 	width: 100%;
+	background-color:$primary-color;
 }
 
 .course-detail-header{
@@ -17,6 +20,7 @@
 	width: 23%;
 	margin: 35px auto;
 }
+
 .student-enrolment-form input{
 	margin-left: 20px;
 }

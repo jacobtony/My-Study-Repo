@@ -1,6 +1,18 @@
 <div class="courses-list">These are the courses offered : 
-<p><input [(ngModel)] = "courseName"/> <button (click) = "addCourse(courseName)">Add Course</button> </p> 
+<p [style.margin-top.px]="10">
 
-<p *ngFor="let course of courses" class="course-name"><a routerLink="../course-detail/{{course._id}}" >{{course.courseName}}</a><button (click) = "deleteCourse(course)">Delete</button></p>
+
+	<app-input [(InputValue)]="courseName" [placeholderValue] = "'Add Your Course'"></app-input>
+
+
+	<button class="ripple" (click) = "addCourse(courseName)">Add Course</button> 
+
+
+</p> 
+
+
+
+
+<p *ngFor="let course of courses" class="course-name"><a routerLink="../course-detail/{{course._id}}" >{{course.courseName}}</a><button   (click) = "deleteCourse(course)">Delete</button></p>
 
 </div> 

@@ -4,22 +4,22 @@ import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import { inspect } from 'util';
-@Component({
+import './course-detail.component.scss'; 
+@Component({ 
   selector: 'app-course-details',
-  templateUrl: `course-detail.component.html`,
-  styleUrls:['course-detail.component.css']
- })
-export class CourseDetailComponent implements OnInit{
+  templateUrl: `course-detail.component.html`
+ }) 
+
+  export class CourseDetailComponent implements OnInit{
   title = 'Courses Offered';
   courses = [];
   user = {};
   selectedCourse = {};
-  
-
     constructor(private fb: FormBuilder, private courseService:CourseService, private route: ActivatedRoute, private location: Location) {
         
-    }
-
+    } 
+     
+ 
 ngOnInit(){
    this.myForm = this.fb.group({
 
